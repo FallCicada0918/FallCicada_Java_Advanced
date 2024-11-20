@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--POM模型的版本 V4.0-->
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 組ID  一般是公司域名的倒寫 + 項目名  -->
+    <groupId>com.DJI</groupId>
+    <!--模塊名-->
+    <artifactId>maven_Dome</artifactId>
+    <!--版本號-->
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <java.version>8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <!--當前項目所需要的其他maven項目依賴-->
+    <dependencies>
+        <!--單獨的每一個依賴都有一個這樣的標簽-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <!--可選標簽 用來指定這個依賴的作用範圍-->
+            <scope>compile</scope>
+        </dependency>
+        <!--druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.16</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>testDemo</finalName>
+    </build>
+<!--    <properties>-->
+<!--    &lt;!&ndash;配置Java版本&ndash;&gt;-->
+<!--        <java.version>8</java.version>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--        <maven.compiler.source>1.8</maven.compiler.source>-->
+<!--        <maven.compiler.target>1.8</maven.compiler.target>-->
+<!--    </properties>-->
+</project>
