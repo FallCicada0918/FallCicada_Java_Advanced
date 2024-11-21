@@ -3,7 +3,7 @@
  * @Author: FallCicada
  * @Date: 2024-11-20 10:30:35
  * @LastEditors: FallCicada
- * @LastEditTime: 2024-11-21 10:21:37
+ * @LastEditTime: 2024-11-21 10:43:12
  * @: 無限進步
 -->
 # Maven
@@ -76,7 +76,7 @@ mvn --version
 ```java
 maven-project/
 ├── src
-│   └── main => 实际项目资源
+│   ── main => 实际项目资源
 │        ├── java => java源代码目录
 │        └── resources => 配置文件目录
 ├── test
@@ -84,6 +84,42 @@ maven-project/
 │    └── resources
 └── pom.xml => 项目配置文件
 ```
+完整配置文件
+```xml
+├──  pom.xml                               # Maven 项目管理文件 
+├──  src
+    ├──  main                              # 项目主要代码
+    │   ├──  java                          # Java 源代码目录
+    │   │   └──  com/example/myapp         # 开发者代码主目录
+    │   │       ├──  controller            # 存放 Controller 层代码的目录
+    │   │       ├──  service               # 存放 Service 层代码的目录
+    │   │       ├──  dao                   # 存放 DAO 层代码的目录
+    │   │       └──  model                 # 存放数据模型的目录
+    │   ├──  resources                     # 资源目录，存放配置文件、静态资源等
+    │   │   ├──  log4j.properties          # 日志配置文件
+    │   │   ├──  spring-mybatis.xml        # Spring Mybatis 配置文件
+    │   │   └──  static                    # 存放静态资源的目录
+    │   │       ├──  css                   # 存放 CSS 文件的目录
+    │   │       ├──  js                    # 存放 JavaScript 文件的目录
+    │   │       └──  images                # 存放图片资源的目录
+    │   └──  webapp                        # 存放 WEB 相关配置和资源
+    │       ├──  WEB-INF                   # 存放 WEB 应用配置文件
+    │       │   ├──  web.xml               # Web 应用的部署描述文件
+    │       │   └──  classes               # 存放编译后的 class 文件
+    │       └──  index.html                # Web 应用入口页面
+    └──  test                              # 项目测试代码
+        ├──  java                          # 单元测试目录
+        └──  resources                     # 测试资源目录
+```
+
+-   pom.xml：Maven 项目管理文件，用于描述项目的依赖和构建配置等信息。
+-   src/main/java：存放项目的 Java 源代码。
+-   src/main/resources：存放项目的资源文件，如配置文件、静态资源等。
+-   src/main/webapp/WEB-INF：存放 Web 应用的配置文件。
+-   src/main/webapp/index.jsp：Web 应用的入口页面。
+-   src/test/java：存放项目的测试代码。
+-   src/test/resources：存放测试相关的资源文件，如测试配置文件等。
+
 #### pom.xml
 Project Object Model 项目对象模型
 ### 范围
@@ -100,6 +136,14 @@ Project Object Model 项目对象模型
 
 4. test 测试时 Junit
 
+| 依赖范围     | 描述                                                         |
+| ------------ | ------------------------------------------------------------ |
+| **`compile`**  | 编译依赖范围，scope 元素的缺省值。使用此依赖范围的 Maven 依赖，对于三种 classpath 均有效，即该 Maven 依赖在上述三种 classpath 均会被引入。例如，log4j 在编译、测试、运行过程都是必须的。 |
+| **`test`**     | 测试依赖范围。使用此依赖范围的 Maven 依赖，只对测试 classpath 有效。例如，Junit 依赖只有在测试阶段才需要。 |
+| **`provided`** | 已提供依赖范围。使用此依赖范围的 Maven 依赖，只对编译 classpath 和测试 classpath 有效。例如，servlet-api 依赖对于编译、测试阶段而言是需要的，但是运行阶段，由于外部容器已经提供，故不需要 Maven 重复引入该依赖。 |
+| **`runtime`**      | 运行时依赖范围。使用此依赖范围的 Maven 依赖，只对测试 classpath、运行 classpath 有效。例如，JDBC 驱动实现依赖，其在编译时只需 JDK 提供的 JDBC 接口即可，只有测试、运行阶段才需要实现了 JDBC 接口的驱动。 |
+| **`system`**       | 系统依赖范围，其效果与 provided 的依赖范围一致。其用于添加非 Maven 仓库的本地依赖，通过依赖元素 dependency 中的 systemPath 元素指定本地依赖的路径。鉴于使用其会导致项目的可移植性降低，一般不推荐使用。 |
+| **`import`**       | 导入依赖范围，该依赖范围只能与 dependencyManagement 元素配合使用，其功能是将目标 pom.xml 文件中 dependencyManagement 的配置导入合并到当前 pom.xml 的 dependencyManagement 中。 |
 ### 生命周期 lifecycle 
 maven项目中有三套生命周期，了解主要阶段
 
@@ -125,6 +169,16 @@ idea为了快速使用maven生命周期 提供了一个工具栏 给出了快速
       mvn install 
       ...
 ```
+| 命令        | 描述                        |
+| ----------- | --------------------------- |
+| mvn help    | 显示帮助信息                |
+| mvn compile | 编译项目，生成target文件    |
+| mvn package | 打包项目，生成jar或war文件  |
+| mvn clean   | 清理编译或打包后的项目结构  |
+| mvn install | 打包后上传到maven本地仓库   |
+| mvn deploy  | 只打包，上传到maven私服仓库 |
+| mvn site    | 生成站点                    |
+| mvn test    | 执行测试源码                |
 ## XML
 + <font size=10>**.xml**</font>
   + 文件后缀为 .xml
@@ -234,7 +288,7 @@ idea为了快速使用maven生命周期 提供了一个工具栏 给出了快速
 |`&iquest;`|  ¿  |Inverted question mark|
 |`&times;`|  ×  |Multiplication sign|
 |`&divide;`| ÷  |Division sign|
-x'm'l'
+
 ##### 3.3 属性 
 属性值写到开始标签中 属性值必须加引号 可以是单引号也可以是双引号
 ```xml
