@@ -3,7 +3,7 @@
  * @Author: FallCicada
  * @Date: 2024-11-20 10:30:35
  * @LastEditors: FallCicada
- * @LastEditTime: 2024-11-21 16:50:43
+ * @LastEditTime: 2024-11-22 08:38:51
  * @: 無限進步
 -->
 # Maven
@@ -360,4 +360,18 @@ idea为了快速使用maven生命周期 提供了一个工具栏 给出了快速
   2. #IMPLIED ：属性可以不出现
   3. default-value ：属性可以不出现，但是会有默认值
   4. #FIXED ：属性可以不出现，但是如果出现的话必须是指定的属性值
+## XML解析
+XML解析的方式一般分为俩种：
+* DOM解析
+* SAX解析
 
+DOM，（Document Object Model）文档对象模型，是 W3C 组织推荐的处理 XML 的一种方式。
+
+使用DOM方式解析，要求解析器把整个XML文档装载到一个Document对象中。Document对象包含文档元素，即根元素，根元素包含N个子元素。
+
+根据DOM的定义，XML 文档中的每个元素都是一个**节点（Node）**：
+* XML文档只有一个根节点
+* XML中每个元素都是一个元素节点
+* XML中每个文本都是一个文本节点
+* XML中每个属性都是一个属性节点
+* XML中每个注释都是一个注释节点

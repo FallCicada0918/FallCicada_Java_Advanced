@@ -1,0 +1,10 @@
+<student>
+    <stu id="2024001">
+        <name>Tom</name>
+        <age>23</age>
+    </stu>
+    <stu id="2024002">
+        <name>李四</name>
+        <age>24</age>
+    </stu>
+</student>

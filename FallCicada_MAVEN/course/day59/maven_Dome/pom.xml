@@ -24,7 +24,7 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <!--可選標簽 用來指定這個依賴的作用範圍-->
-            <scope>compile</scope>
+            <scope>compile</scope
         </dependency>
         <!--druid-->
         <dependency>
