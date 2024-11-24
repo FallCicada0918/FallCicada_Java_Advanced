@@ -13,9 +13,18 @@ import java.io.File;
  * @LastEditors: 86138
  * @: 無限進步
  */
-public class TextDomJ {
+public class TestDomJ {
     public static void main(String[] args) {
         System.out.println("hello Copilot");
+
+        TestDomJ testDomJ = new TestDomJ();
+        String filePath = "src/main/java/com/DJI/class.xml";
+        try {
+            Document document = testDomJ.parse(new File(filePath));
+            System.out.println(document);
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
     }
     //获取dom4j的文档对象
     public Document parse(File file) throws DocumentException {
