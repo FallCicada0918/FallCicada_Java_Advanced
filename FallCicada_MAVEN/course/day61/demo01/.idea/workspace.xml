@@ -5,9 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7243150-6fba-40f4-afb2-c1b3259ec9e2" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/DJI/TextDomJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DJI/TestDomJ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/Code-Mybatis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/src/main/java/com/DJI/Demo01Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/src/main/java/com/DJI/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/src/main/java/com/DJI/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/Code-Mybatis/demo01/src/test/java/com/DJI/Demo01ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/demo/src/main/java/com/DJI/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/demo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/day60/demo/src/test/java/com/DJI/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/demo/src/main/java/com/example/demo/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/demo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_Mybatis/course/demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,25 +64,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/WorkSpace/FallCicada_WorkSpace/FallCicada_Java_Advanced_course/FallCicada_MAVEN/course/day61/demo01/src/main/java/com/DJI/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.Test.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.TestDomJ.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.TextDomJ.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.TextSAX.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/WorkSpace/FallCicada_WorkSpace/FallCicada_Java_Advanced_course/FallCicada_Mybatis/course/day62/demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/WorkSpace/FallCicada_WorkSpace/FallCicada_Java_Advanced_course/FallCicada_MAVEN/course/day61/demo01/src/main/java/com/DJI/Main.java",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.Test.executor": "Run",
+    "应用程序.TestDomJ.executor": "Run",
+    "应用程序.TextDomJ.executor": "Run",
+    "应用程序.TextSAX.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="应用程序.TestDomJ">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.DJI.Test" />
@@ -136,6 +165,7 @@
       <workItem from="1732238943755" duration="7910000" />
       <workItem from="1732257159378" duration="5056000" />
       <workItem from="1732430835183" duration="22000" />
+      <workItem from="1732496650696" duration="62000" />
     </task>
     <servers />
   </component>
