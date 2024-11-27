@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3b78123-1114-49ad-9a73-64592b8676a2" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../FallCicada_MAVEN/course/day61/demo01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../FallCicada_MAVEN/course/day61/demo01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Code_Mybatis" beforeDir="false" afterPath="$PROJECT_DIR$/../Code_Mybatis" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Code_Mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Code_Mybatis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Code_Mybatis/src/main/java/com/dji/Code_Mybatis/CodeMybatisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Code_Mybatis/src/main/java/com/dji/Code_Mybatis/CodeMybatisApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Code_Mybatis/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Code_Mybatis/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Code_Mybatis/src/test/java/com/dji/Code_Mybatis/CodeMybatisApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Code_Mybatis/src/test/java/com/dji/Code_Mybatis/CodeMybatisApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.DemoApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/WorkSpace/FallCicada_WorkSpace/FallCicada_Java_Advanced_course/FallCicada_Mybatis/course/day62/Code_Mybatis",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/WorkSpace/FallCicada_WorkSpace/FallCicada_Java_Advanced_course/FallCicada_Mybatis/course/day64/Code_Mybatis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,6 +81,8 @@
       <workItem from="1732496305660" duration="215000" />
       <workItem from="1732496590282" duration="28000" />
       <workItem from="1732496715014" duration="1083000" />
+      <workItem from="1732609322752" duration="27000" />
+      <workItem from="1732612250790" duration="8000" />
     </task>
     <servers />
   </component>
