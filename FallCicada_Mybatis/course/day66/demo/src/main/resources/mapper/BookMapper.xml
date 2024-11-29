@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 是 Mapper接口的全路径名 -->
+<mapper namespace="com.dji.demo.mapper.BookMapper">
+  <!-- 基础映射 -->
+  <resultMap id="BaseBookResult" type="com.dji.demo.Book">
+    <id column="id" property="id" />
+    <result column="name" property="name"/>
+    <result column="description" property="description"/>
+    <result column="author" property="author"/>
+    <result column="publisher" property="publisher"/>
+    <result column="price" property="price"/>
+    <result column="store_num" property="storeNum"/>
+    <result column="status" property="status"/>
+    <result column="category_id" property="categoryId"/>
+  </resultMap>
+
+
+</mapper>

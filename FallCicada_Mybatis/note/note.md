@@ -3,7 +3,7 @@
  * @Author: FallCicada
  * @Date: 2024-11-25 08:41:50
  * @LastEditors: FallCicada
- * @LastEditTime: 2024-11-28 19:25:14
+ * @LastEditTime: 2024-11-29 08:38:14
  * @: 無限進步
 -->
 # Mybatis
@@ -237,4 +237,3 @@ resultType 和 resultMap 是不能同时存在的
 resultMap 中可以实现继承
 
 
-查询指定id的书籍然后信息中要包含所属的类目（二级分类）

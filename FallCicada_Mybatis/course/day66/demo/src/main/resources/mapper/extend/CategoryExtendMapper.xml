@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 是 Mapper接口的全路径名 -->
+<mapper namespace="com.dji.demo.mapper.extend.CategoryExtendMapper">
+    <!-- 二级图书类别 -->
+    <resultMap id="Category2Result" type="com.dji.demo.Category">
+        <!-- id 标签 用来映射主键列 -->
+        <id column="cid" property="id" />
+        <!--  其他列是结果列 result -->
+        <result column="cname" property="name" />
+        <result column="cdescription" property="description" />
+        <result column="pid" property="parentId" />
+    </resultMap>  
+    <!-- 一对多的嵌套结果集 -->
+    <!--  使用extends集成基础结果集  -->
+    <resultMap id="CategoryExtendResult" type="com.dji.demo.extend.CategoryExtend"
+    extends="com.dji.demo.mapper.CategoryMapper.BaseCategoryResult">
+        <!-- 借助 collection 标签 实现一对多嵌套结果映射 -->
+        <!-- property 需要映射的属性 -->
+        <!-- resultMap 映射的规则 -->
+        <collection property="categories" resultMap="Category2Result"/>
+    </resultMap>
+    <select id="findByIdWithResult" resultMap="com.dji.demo.mapper.extend.CategoryExtendMapper.CategoryExtendResult">
+        select ec1.*,
+        ec2.id cid,ec2.name cname,ec2.description cdescription,ec2.parent_id pid
+        from es_category ec1 LEFT JOIN es_category ec2
+        on ec1.id = ec2.parent_id
+        where ec1.id = #{categoryId}
+    </select>
+
+</mapper>

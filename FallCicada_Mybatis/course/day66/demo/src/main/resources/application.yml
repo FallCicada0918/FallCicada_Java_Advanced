@@ -1,0 +1,22 @@
+spring:
+  #配置数据库相关的内容
+  datasource:
+    #驱动类名称
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #数据库连接的url
+    url: jdbc:mysql://localhost:3306/jdbc_test
+    #连接数据库的用户名
+    username: fallcicada
+    #连接数据库的密码
+    password: 9572
+#下面这些内容是为了让MyBatis映射
+mybatis:
+  configuration:
+  #指定mybatis输出日志的位置, 输出控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # true 开启驼峰命名  false 关闭
+    map-underscore-to-camel-case: false
+  #映射文件扫描
+  mapper-locations: classpath:mapper/**/*.xml
+  #指定Mybatis的实体目录
+  type-aliases-package: com.briup.demo.mybatis.entity

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 是 Mapper接口的全路径名 -->
+<mapper namespace="com.dji.demo.mapper.ShopCarMapper">
+    <!-- 购物车添加书籍-->
+    <insert id="insertShopCar" >
+        insert into es_shopcar(user_id,book_id,num)
+        values(#{userId},#{bookId},#{num})
+    </insert>
+    <!--  指定用户修改购物车中某本书籍的数量  -->
+    <update id="updateShopCar" parameterType="com.dji.demo.ShopCar">
+        update es_shopcar
+        set num = #{num}
+        where user_id = #{userId}
+        and book_id = #{bookId}
+    </update>
+    <!-- 删除指定用户的指定书籍 -->
+    <delete id="deleteShopCar" >
+        delete from es_shopcar
+        where user_id = #{userId}
+        and book_id = #{bookId}
+    </delete>
+    <!-- 删除userId用户的相关记录 -->
+    <delete id="clearShopCar" >
+        delete from es_shopcar
+        where user_id = #{userId}
+    </delete>
+
+    <!-- 结果映射 -->
+    <resultMap id="BookShopCarResult" type="com.dji.demo.extend.BookShopCarExtend"
+               extends="com.dji.demo.mapper.BookMapper.BaseBookResult">
+        <result column="num" property="num"/>
+    </resultMap>
+    <!-- 查询购物车中书籍以及数量 -->
+    <select id="findBooksByUserId" resultMap="BookShopCarResult">
+        select eb.*,es.num
+        from es_shopcar es,es_book eb
+        where es.book_id = eb.id
+        and es.user_id = #{userId}
+    </select>
+
+    <select id="findUserWithShopCarBooks" resultMap="BookShopCarResult">
+        select u.*, eb.*, es.num
+        from es_user u
+        left join es_shopcar es on u.id = es.user_id
+        left join es_book eb on es.book_id = eb.id
+        where u.id = #{userId}
+    </select>
+
+    <resultMap id="UserShopCarExtendResult" type="com.dji.demo.extend.UserShopCarExtend">
+        <!-- user的属性 -->
+        <result column="uid" property="id" />
+        <result column="username" property="username" />
+        <result column="phone" property="phone" />
+        <!-- 书籍的属性 -->
+        <collection property="books" resultMap="com.dji.demo.mapper.BookMapper.BaseBookResult"/>
+    </resultMap>
+
+    <select id="findUserByIdReset" resultMap="UserShopCarExtendResult">
+        select eu.id uid,eu.username,eu.phone,
+        eb.*,
+        es.num
+        from es_user eu,es_shopcar es,es_book eb
+        where eu.id = es.user_id
+        and eb.id = es.book_id
+        and eu.id = #{userId}
+    </select>
+</mapper>

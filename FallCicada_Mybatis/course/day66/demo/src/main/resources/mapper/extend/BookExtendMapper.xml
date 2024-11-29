@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 是 Mapper接口的全路径名 -->
+<mapper namespace="com.dji.demo.mapper.extend.BookExtendMapper">
+  <!-- 基础映射 -->
+  <resultMap id="BookWithCategoryResult" type="com.dji.demo.extend.BookExtend">
+    <id column="id" property="id" />
+    <result column="name" property="name"/>
+    <result column="description" property="description"/>
+    <result column="author" property="author"/>
+    <result column="publisher" property="publisher"/>
+    <result column="price" property="price"/>
+    <result column="store_num" property="storeNum"/>
+    <result column="status" property="status"/>
+    <result column="category_id" property="categoryId"/>
+    <!-- 类别信息 -->
+    <result column="id" property="category.id"/>
+    <result column="name" property="category.name"/>
+    <result column="description" property="category.description"/>
+    <result column="parent_id" property="category.parentId"/>
+  </resultMap>
+
+  <select id="findByIdWithCategory" resultMap="BookWithCategoryResult">
+    select b.* , c.id cid,c.name cname,c.description cdescription
+    from es_book b ,es_category c
+    where b.category_id = c.id
+    and b.id = #{bookId}
+  </select>
+
+
+</mapper>

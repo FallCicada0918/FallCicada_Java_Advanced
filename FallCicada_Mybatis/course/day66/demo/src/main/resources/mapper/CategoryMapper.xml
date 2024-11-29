@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 是 Mapper接口的全路径名 -->
+<mapper namespace="com.dji.demo.mapper.CategoryMapper">
+    <resultMap id="BaseCategoryResult" type="com.dji.demo.Category">
+        <!-- id 标签 用来映射主键列 -->
+        <id column="id" property="id" />
+        <!--  其他列是结果列 result -->
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+    </resultMap>
+
+    <resultMap id="BaseCategoryResultNew" type="com.dji.demo.Category" extends="BaseCategoryResult">
+        <!--  父类属性子类继承 -->
+        <result column="parent_id" property="parentId" />
+    </resultMap>
+
+    <resultMap id="BaseCategoryResultParent" type="com.dji.demo.Category">
+        <!-- id 标签 用来映射主键列 -->
+        <id column="id" property="id" />
+        <!--  其他列是结果列 result -->
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+        <association property="parent" javaType="com.dji.demo.Category"
+                     select="findById" column="parent_id" >
+        <!-- <id column="parent_id" property="id" /> -->
+        </association>
+    </resultMap>
+
+    <select id="findAllCategories" resultMap="BaseCategoryResultParent">
+        select *
+        from es_category c
+        left join es_category p on c.parent_id = p.id
+    </select>
+
+    <select id="findByIdParent" resultMap="BaseCategoryResultParent">
+        select *
+        from es_category
+        where id = #{id}
+    </select>
+
+    <select id="findById" resultMap="BaseCategoryResult">
+        select id,name,description
+        from es_category
+        where id = #{id}
+    </select>
+
+    <select id="findByIdNew" resultMap="BaseCategoryResultNew">
+        select id,name,description,parent_id
+        from es_category
+        where id = #{id}
+    </select>
+
+</mapper>
