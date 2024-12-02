@@ -1,9 +1,11 @@
 package com.dji.demo.extend;
 
 import com.dji.demo.User;
+import org.apache.ibatis.annotations.CacheNamespace;
 
 import java.util.List;
 
+@CacheNamespace(blocking = true)
 public class UserShopCarExtend extends User {
     private List<BookShopCarExtend> books;
     @Override

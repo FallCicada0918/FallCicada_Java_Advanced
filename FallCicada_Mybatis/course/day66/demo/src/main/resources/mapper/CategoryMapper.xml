@@ -4,6 +4,8 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace 是 Mapper接口的全路径名 -->
 <mapper namespace="com.dji.demo.mapper.CategoryMapper">
+    <cache />
+
     <resultMap id="BaseCategoryResult" type="com.dji.demo.Category">
         <!-- id 标签 用来映射主键列 -->
         <id column="id" property="id" />
@@ -40,7 +42,6 @@
         from es_category
         where id = #{id}
     </select>
-
     <select id="findById" resultMap="BaseCategoryResult">
         select id,name,description
         from es_category

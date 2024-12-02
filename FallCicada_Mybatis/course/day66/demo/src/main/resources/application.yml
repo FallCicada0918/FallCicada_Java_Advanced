@@ -16,6 +16,8 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # true 开启驼峰命名  false 关闭
     map-underscore-to-camel-case: false
+    #开启二级缓存（默认开启的）
+    cache-enabled: true
   #映射文件扫描
   mapper-locations: classpath:mapper/**/*.xml
   #指定Mybatis的实体目录

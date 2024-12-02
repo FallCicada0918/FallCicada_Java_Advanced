@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 /**
  * @program: demo
  * @description: User实体类 实体属性采用驼峰命名法
- * @author: rendc
+ * @author: Fallcicada
  * @create: 2024-11-27 10:58
  **/
 @Data // get set toString equals hashCode

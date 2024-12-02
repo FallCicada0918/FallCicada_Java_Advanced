@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 /**
  * @program: demo
  * @description: 类目扩展测试类
- * @author: rendc
+ * @author: Fallcicada
  * @create: 2024-11-29 09:23
  **/
 @SpringBootTest

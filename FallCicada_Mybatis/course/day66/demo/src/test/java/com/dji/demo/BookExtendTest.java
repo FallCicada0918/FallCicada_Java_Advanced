@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 /**
  * @program: demo
  * @description: 图书扩展类的测试类
- * @author: rendc
+ * @author: Fallcicada
  * @create: 2024-11-28 15:41
  **/
 @SpringBootTest

@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * @program: demo
  * @description: 图书的实体类
- * @author: rendc
+ * @author: Fallcicada
  * @create: 2024-11-28 15:06
  **/
 @Data

@@ -24,6 +24,9 @@ class DemoApplicationTests {
     Category category = categoryMapper.findById(2);
     System.out.println("category：" + category);
     System.out.println("查询成功");
+    Category category1 = categoryMapper.findById(2);
+    System.out.println("category：" + category1);
+    System.out.println("查询成功");
   }
 
   @Test

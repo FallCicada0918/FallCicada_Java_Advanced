@@ -3,6 +3,7 @@ package com.dji.demo.mapper;
 import com.dji.demo.ShopCar;
 import com.dji.demo.extend.BookShopCarExtend;
 import com.dji.demo.extend.UserShopCarExtend;
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -10,6 +11,7 @@ import java.util.List;
 
 //购物车相关操作
 @Mapper
+//@CacheNamespace(blocking = true)
 public interface ShopCarMapper {
     // 指定用户往购物车添加书籍
     void insertShopCar(@Param("userId") Integer userId, @Param("bookId") Integer bookId, @Param("num") Integer num);

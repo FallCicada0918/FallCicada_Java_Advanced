@@ -8,19 +8,22 @@
 package com.dji.demo.mapper;
 
 import com.dji.demo.Category;
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
 /**
  * @program: demo
  * @description: UserMapper接口
- * @author: rendc
+ * @author: FallCicada
  * @create: 2024-11-27 11:13
  **/
 // 在程序运行时 框架会自动生成接口的实现类对象，
 // 并交给spring的IOC容器管理
 @Mapper // 表示这个是MyBatis中的Mapper接口
+//@CacheNamespace(blocking = true)
 public interface CategoryMapper {
 
   Category findById(Integer id);

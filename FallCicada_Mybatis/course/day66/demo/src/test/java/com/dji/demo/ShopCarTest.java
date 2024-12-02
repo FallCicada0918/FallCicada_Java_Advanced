@@ -13,6 +13,7 @@ import com.dji.demo.mapper.ShopCarMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -35,9 +36,15 @@ public class ShopCarTest {
 
   }
   @Test
+  @Transactional
   public  void testfindBooksByUserId(){
-    List<BookShopCarExtend> bookShopCarExtends = shopCarMapper.findBooksByUserId(1);
+    List<BookShopCarExtend> bookShopCarExtends = shopCarMapper.findBooksByUserId(2);
     for (BookShopCarExtend bookShopCarExtend : bookShopCarExtends) {
+      System.out.println(bookShopCarExtend);
+    }
+
+    List<BookShopCarExtend> bookShopCarExtends2 = shopCarMapper.findBooksByUserId(2);
+    for (BookShopCarExtend bookShopCarExtend : bookShopCarExtends2) {
       System.out.println(bookShopCarExtend);
     }
   }

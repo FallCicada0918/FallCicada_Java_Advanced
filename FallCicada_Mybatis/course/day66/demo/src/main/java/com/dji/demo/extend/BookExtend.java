@@ -20,6 +20,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
+
 public class BookExtend extends Book {
   // 书籍的类目信息
   private Category category;
